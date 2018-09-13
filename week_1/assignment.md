@@ -1,6 +1,10 @@
 # Generative Music week 1 assignment
 
 ## Generative Music Examples
+
+### [OK Go - Needing/Getting](https://www.youtube.com/watch?v=MejbOFk7H6c)
+This piece is an interesting experience of a system designed to make music which works only mechanically when the car moves in a certain direction. One execution is a destructive process that probably won't allow the system to make the same music pattern within other play. I selected this piece as generative music because is a system with certain rules and a way of play it in order to make music.
+
 ### [Laurie Spiegel](http://www.electronicbeats.net/the-feed/laurie-spiegel-score/)
 Even I didn't find a performed version of this piece I got very impressed of the notation used for composing it. This is a piece for two modular synths composed by Spiegel in 1970. It is interesting how the music sheet turns into a drawing paper -well, in essence it is a drawing paper- who supports expressive shapes: for example the noise -I think it is noise- is a dense bunch of lines who moves in the space and mixed to get fused in the end of the piece.
 ![](http://www.electronicbeats.net/app/uploads/2016/09/Laurie-Spiegel-score.jpg)
