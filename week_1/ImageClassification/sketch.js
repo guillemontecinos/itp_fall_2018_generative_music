@@ -18,7 +18,7 @@ let img;
 function setup() {
   noCanvas();
   // Load the image
-  img = createImg('images/perro.jpg', imageReady);
+  img = createImg('images/puto.jpg', imageReady);
   img.size(400, 400);
 }
 
