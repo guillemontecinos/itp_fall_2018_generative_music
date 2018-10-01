@@ -17,13 +17,16 @@ notes = {"Cipreses":72,"Rapel":69,"El_Toro":67,"Colbun":64,"Machicura":74,"Canut
 max_gen = {"Cipreses":2544,"Rapel":9048,"El_Toro":10800,"Colbun":11376,"Machicura":2280,"Canutillar":4128,"Pehuenche":13680,"Pangue":11208,"Ralco":16560,"Bocamina_II":8400}
 
 # Functions
-
+# midi fave function
 def save_midi(midi_file):
     filename = midi_output
     with open(filename, 'wb') as output_file:
         midi_file.writeFile(output_file)
         print 'midi file saved'
 
+# note assgin function
+
+# midi composer function
 def compose_midi(in_data,notes,max_gen):
     track = 0
     channel = 0
@@ -44,7 +47,9 @@ def compose_midi(in_data,notes,max_gen):
             column = 1
             while column < len(in_data[i]):
                 # if column is ralco do notes to trigger mapuche samples
+                    # call assign_note. the scale doesn't matter cause it will trigger samples, but the amount of notes is important because it depends on the number of samples triggered.
                 # elseif column is bocamina create bass
+                    # function assign_note depending on number of notes desired, octave desired. It may assign the media of the data to the root of the octave desired. So, the range of notes should be +/-1 octave from the choosen octave.
                 # else do chords
                 note = notes[in_data[0][column]]
                 volume = int(127*int(in_data[i][column])/int(max_gen[in_data[0][column]]))
