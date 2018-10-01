@@ -14,7 +14,7 @@ midi_output = '../midi_folder/embalse1.mid'
 # Define a dictionary for embalses to midinotes
 notes = {"Cipreses":72,"Rapel":69,"El_Toro":67,"Colbun":64,"Machicura":74,"Canutillar":71,"Pehuenche":62,"Pangue":65,"Ralco":60} # Cmaj scale
 
-max_gen = {"Cipreses":2544,"Rapel":9048,"El_Toro":10800,"Colbun":11376,"Machicura":2280,"Canutillar":4128,"Pehuenche":13680,"Pangue":11208,"Ralco":16560}
+max_gen = {"Cipreses":2544,"Rapel":9048,"El_Toro":10800,"Colbun":11376,"Machicura":2280,"Canutillar":4128,"Pehuenche":13680,"Pangue":11208,"Ralco":16560,"Bocamina_II":8400}
 
 # Functions
 
@@ -39,10 +39,13 @@ def compose_midi(in_data,notes,max_gen):
     i = 1
     while i < len(in_data):
         time = float(in_data[i][0])
-        print time
+        # print time
         if time >= 0:
             column = 1
             while column < len(in_data[i]):
+                # if column is ralco do notes to trigger mapuche samples
+                # elseif column is bocamina create bass
+                # else do chords
                 note = notes[in_data[0][column]]
                 volume = int(127*int(in_data[i][column])/int(max_gen[in_data[0][column]]))
                 midi_file.addNote(track, channel, note, time, duration, volume)
