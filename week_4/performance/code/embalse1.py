@@ -45,7 +45,6 @@ def compose_midi(in_data,notes,max_gen):
             while column < len(in_data[i]):
                 note = notes[in_data[0][column]]
                 volume = int(127*int(in_data[i][column])/int(max_gen[in_data[0][column]]))
-                # print("track", track,"channel",channel,"note:",note,"time:",time,"duration:",duration,"volume:",volume)
                 midi_file.addNote(track, channel, note, time, duration, volume)
                 column += 1
             i += 1
