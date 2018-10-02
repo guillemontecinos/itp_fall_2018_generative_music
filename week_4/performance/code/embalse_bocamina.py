@@ -8,8 +8,8 @@ import numpy
 from scipy import stats
 
 # declare input and output file paths
-csv_input = '../data/1701embalse.csv'
-midi_output = '../midi_folder/embalse1.mid'
+csv_input = '../data/embalse_bocamina.csv'
+midi_output = '../midi_folder/embalse_bocamina.mid'
 
 # Define a dictionary for embalses to midinotes
 notes = {"Cipreses":72,"Rapel":69,"El_Toro":67,"Colbun":64,"Machicura":74,"Canutillar":71,"Pehuenche":62,"Pangue":65,"Ralco":60} # Cmaj scale
@@ -23,6 +23,36 @@ def save_midi(midi_file):
     with open(filename, 'wb') as output_file:
         midi_file.writeFile(output_file)
         print 'midi file saved'
+
+# get stats function
+def get_stats(data, header):
+    # based on ufo_by_date.py get_stats function
+    data_list = []
+    column = 0
+    # search for header
+    i = 0
+    while i < len(data[0]):
+        if data[0][i] == header:
+            column = i
+        i = i + 1
+    if column == 0:
+        print "Entry was not found in data set."
+        return
+    # extract dat from column
+    row = 1
+    while row < len(data):
+        data_list.append(float(data[row][column]))
+        row = row + 1
+    stdev = numpy.std(data_list)
+    mean = numpy.mean(data_list)
+    median = numpy.median(data_list)
+    mode = stats.mode(data_list)
+    return {
+        "mean": mean,
+        "median": median,
+        "mode": mode[0],
+        "stdev": stdev
+    }
 
 # note assgin function
 
@@ -48,12 +78,17 @@ def compose_midi(in_data,notes,max_gen):
             while column < len(in_data[i]):
                 # if column is ralco do notes to trigger mapuche samples
                     # call assign_note. the scale doesn't matter cause it will trigger samples, but the amount of notes is important because it depends on the number of samples triggered.
+                if in_data[0][column] == "Ralco":
+                    print "Ralco!"
                 # elseif column is bocamina create bass
                     # function assign_note depending on number of notes desired, octave desired. It may assign the media of the data to the root of the octave desired. So, the range of notes should be +/-1 octave from the choosen octave.
+                elif in_data[0][column] == "Bocamina_II":
+                    print "Bocamina_II!"
                 # else do chords
-                note = notes[in_data[0][column]]
-                volume = int(127*int(in_data[i][column])/int(max_gen[in_data[0][column]]))
-                midi_file.addNote(track, channel, note, time, duration, volume)
+                else:
+                    note = notes[in_data[0][column]]
+                    volume = int(127*int(in_data[i][column])/int(max_gen[in_data[0][column]]))
+                    midi_file.addNote(track, channel, note, time, duration, volume)
                 column += 1
             i += 1
     save_midi(midi_file)

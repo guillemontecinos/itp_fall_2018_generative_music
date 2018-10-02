@@ -16,14 +16,14 @@ with open(csv_input, 'rb') as csvfile:
         generation.append(column)
 
     # for column in generation[0]:
-    column = 0
-    while column < len(generation[0]):
+    # column = 0
+    # while column < len(generation[0]):
         # print generation[0][column]
-        if generation[0][column] == "Bocamina_II":
-            print "Bocamina!"
-        else:
-            print "Not Bocamina :()"
-        column = column + 1
+        # if generation[0][column] == "Bocamina_II":
+        #     print "Bocamina!"
+        # else:
+        #     print "Not Bocamina :()"
+        # column = column + 1
 
     # print generation[0]
 
@@ -32,3 +32,39 @@ with open(csv_input, 'rb') as csvfile:
     #     time = int(generation[i][0])
     #     i+=1
     #     print time
+
+def get_stats(data, header):
+    # based on ufo_by_date.py get_stats function
+    data_list = []
+    column = 0
+    # search for header
+    i = 0
+    while i < len(data[0]):
+        if data[0][i] == header:
+            column = i
+        i = i + 1
+    if column == 0:
+        print "Entry was not found in data set."
+        return
+    # extract dat from column
+    row = 1
+    while row < len(data):
+        data_list.append(float(data[row][column]))
+        row = row + 1
+    stdev = numpy.std(data_list)
+    mean = numpy.mean(data_list)
+    median = numpy.median(data_list)
+    mode = stats.mode(data_list)
+    return {
+        "mean": mean,
+        "median": median,
+        "mode": mode[0],
+        "stdev": stdev
+    }
+
+def note_assign(central_note, number_of_notes, stats):
+
+stats = get_stats(generation, 'Bocamina_II')
+print ("mean: ", stats['mean'])
+print ("median: ", stats['median'])
+print ("stdev: ", stats['stdev'])
