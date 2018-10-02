@@ -62,9 +62,36 @@ def get_stats(data, header):
         "stdev": stdev
     }
 
-def note_assign(central_note, number_of_notes, stats):
+def note_assign(plant, central_note, scale, number_of_notes, data_set):
+    stats = get_stats(data_set, plant)
+    mean = stats['mean']
+    stdev = stats['stdev']
+    set = []
+    set_len = 6/number_of_notes
+    i = 0
+    while i < number_of_notes:
+        # set[i] = [- 3 * stats['stdev'] + i * set_len * stats['stdev'], - 3 * stats['stdev'] + (i + 1) * set_len * stats['stdev']]
+        set[i] = [stdev * (-3 + i * l), stdev * (-3 + (i + 1) * l)]
+        i = i + 1
+    print set
+    # each sets entry corresponds to one note, and each entry will have a list that will define each range
+    if scale == "major":
+        # for energy in data_set:
+        print "Scale is major"
 
+    else:
+        print "Scale is not major"
+        # break
+
+
+number_of_notes = 10
 stats = get_stats(generation, 'Bocamina_II')
-print ("mean: ", stats['mean'])
-print ("median: ", stats['median'])
-print ("stdev: ", stats['stdev'])
+mean = stats['mean']
+stdev = stats['stdev']
+set = []
+set_len = 6/float(number_of_notes)
+# print set_len
+# print stdev
+for i in range(number_of_notes):
+    set.append([stdev * (-3 + i * set_len), stdev * (-3 + (i + 1) * set_len)])
+print set
