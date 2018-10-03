@@ -59,6 +59,7 @@ def get_stats(data, header):
     }
 
 # note assgin function
+# function assign_note depending on number of notes desired, octave desired. It may assign the media of the data to the root of the octave desired. So, the range of notes should be +/-1 octave from the choosen octave.
 def note_assign(value, plant, octave, scale, number_of_notes, data_set):
     # plant: string corresponding to the header of the data_set
     # octave: distance in octaves from central C (Midi: 60)
@@ -105,9 +106,12 @@ def compose_midi(in_data,notes,max_gen):
                 if in_data[0][column] == "Ralco":
                     print "Ralco!"
                 # elseif column is bocamina create bass
-                    # function assign_note depending on number of notes desired, octave desired. It may assign the media of the data to the root of the octave desired. So, the range of notes should be +/-1 octave from the choosen octave.
                 elif in_data[0][column] == "Bocamina_II":
-                    print "Bocamina_II!"
+                    note = note_assign(float(in_data[i][column]),"Bocamina_II",-2,c_maj,10,in_data)
+                    print note
+                    volume = 100
+                    midi_file.addNote(track, channel+1, note, time, duration, volume)
+                    # print("Bocamina_II: ",in_data[i][column])
                 # else do chords
                 else:
                     note = notes[in_data[0][column]]
