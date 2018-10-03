@@ -62,14 +62,22 @@ def note_assign(value, plant, octave, scale, number_of_notes, data_set):
         set.append([stdev * (-3 + i * set_len), stdev * (-3 + (i + 1) * set_len)])
     # define set entry corresponding to the mean note
     mean_note = math.trunc(numpy.median(range(number_of_notes)))
+    found = 0
     for j in range(len(set)):
         if (set[j][0] <= value and value < set[j][1]):
             found = scale[j - mean_note] + (octave + int(round((j - mean_note) / 8))) * 12
             # add rounded int(round((j - mean_note) / 8)) for cases when we go further to 1 octave
-            return found
+            break
+    if found == 0:
+        found = scale[0] + octave * 12
+    return found
 
 
-print note_assign(float(generation[14][10]),"Bocamina_II", 1, c_maj, 10, generation)
+# print note_assign(float(generation[9][9]),"Ralco", 1, c_maj, 4, generation)
+# print generation[9][9]
+for i in range(1,len(generation)):
+    print note_assign(float(generation[i][9]),"Ralco", 1, c_maj, 4, generation)
+    # print generation[i][9]
 
 # print("value", "modulo", "division")
 # for i in range(30):
