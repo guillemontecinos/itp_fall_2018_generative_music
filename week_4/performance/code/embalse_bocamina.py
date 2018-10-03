@@ -55,6 +55,26 @@ def get_stats(data, header):
     }
 
 # note assgin function
+def note_assign(value, plant, octave, scale, number_of_notes, data_set):
+    # plant: string corresponding to the header of the data_set
+    # octave: distance in octaves from central C (Midi: 60)
+    # scale: a list with the used scale, centered in central C
+    # number_of_notes: range of noted assigned to the data_set
+    stats = get_stats(data_set, plant)
+    mean = stats['mean']
+    stdev = stats['stdev']
+    # calculates set depending on number of notes and stdev
+    set = []
+    set_len = 6/float(number_of_notes)
+    for i in range(number_of_notes):
+        set.append([stdev * (-3 + i * set_len), stdev * (-3 + (i + 1) * set_len)])
+    # define set entry corresponding to the mean note
+    mean_note = math.trunc(numpy.median(range(number_of_notes)))])
+    for j in range(len(set)):
+        if (set[j][0] <= value and value < set[j][1]):
+            found = scale[j - mean_note] + (octave + int(round((j - mean_note) / 8))) * 12
+            # add rounded int(round((j - mean_note) / 8)) for cases when we go further to 1 octave
+            return found
 
 # midi composer function
 def compose_midi(in_data,notes,max_gen):

@@ -5,6 +5,7 @@
 import csv
 import midiutil
 import numpy
+import math
 from scipy import stats
 
 csv_input = '../data/embalse_bocamina.csv'
@@ -46,7 +47,7 @@ def get_stats(data, header):
         "stdev": stdev
     }
 
-def note_assign(plant, octave, scale, number_of_notes, data_set):
+def note_assign(value, plant, octave, scale, number_of_notes, data_set):
     # plant: string corresponding to the header of the data_set
     # octave: distance in octaves from central C (Midi: 60)
     # scale: a list with the used scale, centered in central C
@@ -54,11 +55,22 @@ def note_assign(plant, octave, scale, number_of_notes, data_set):
     stats = get_stats(data_set, plant)
     mean = stats['mean']
     stdev = stats['stdev']
+    # calculates set depending on number of notes and stdev
     set = []
     set_len = 6/float(number_of_notes)
     for i in range(number_of_notes):
         set.append([stdev * (-3 + i * set_len), stdev * (-3 + (i + 1) * set_len)])
-    print len(set)
-    
+    # define set entry corresponding to the mean note
+    mean_note = math.trunc(numpy.median(range(number_of_notes)))])
+    for j in range(len(set)):
+        if (set[j][0] <= value and value < set[j][1]):
+            found = scale[j - mean_note] + (octave + int(round((j - mean_note) / 8))) * 12
+            # add rounded int(round((j - mean_note) / 8)) for cases when we go further to 1 octave
+            return found
 
-note_assign("Bocamina_II", 20, "major", 10, generation)
+
+print note_assign(float(generation[14][10]),"Bocamina_II", 1, c_maj, 10, generation)
+
+# print("value", "modulo", "division")
+# for i in range(30):
+#     print(i, i % 12, round(i / 12))
