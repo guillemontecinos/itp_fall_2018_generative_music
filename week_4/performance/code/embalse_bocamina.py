@@ -5,11 +5,15 @@
 import csv
 import midiutil
 import numpy
+import math
 from scipy import stats
 
 # declare input and output file paths
 csv_input = '../data/embalse_bocamina.csv'
 midi_output = '../midi_folder/embalse_bocamina.mid'
+
+# define c maj scale
+c_maj = [60,62,64,65,67,69,71,72]
 
 # Define a dictionary for embalses to midinotes
 notes = {"Cipreses":72,"Rapel":69,"El_Toro":67,"Colbun":64,"Machicura":74,"Canutillar":71,"Pehuenche":62,"Pangue":65,"Ralco":60} # Cmaj scale
@@ -69,7 +73,7 @@ def note_assign(value, plant, octave, scale, number_of_notes, data_set):
     for i in range(number_of_notes):
         set.append([stdev * (-3 + i * set_len), stdev * (-3 + (i + 1) * set_len)])
     # define set entry corresponding to the mean note
-    mean_note = math.trunc(numpy.median(range(number_of_notes)))])
+    mean_note = math.trunc(numpy.median(range(number_of_notes)))
     for j in range(len(set)):
         if (set[j][0] <= value and value < set[j][1]):
             found = scale[j - mean_note] + (octave + int(round((j - mean_note) / 8))) * 12
