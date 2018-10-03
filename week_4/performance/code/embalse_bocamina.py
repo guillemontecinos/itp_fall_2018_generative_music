@@ -9,7 +9,7 @@ import math
 from scipy import stats
 
 # declare input and output file paths
-csv_input = '../data/embalse_bocamina.csv'
+csv_input = '../data/embalse_bocamina_ene_feb.csv'
 midi_output = '../midi_folder/embalse_bocamina.mid'
 
 # define c maj scale
@@ -95,9 +95,9 @@ def compose_midi(in_data,notes,max_gen):
     program = 0 # Midi instrument
 
     midi_file = midiutil.MIDIFile(3, deinterleave=False, adjust_origin=False)
-    # midi_file.addTrackName(0, 0, "Piano-Embalses")
-    # midi_file.addTrackName(1, 0, "Sample-Ralco")
-    # midi_file.addTrackName(2, 0, "Bass-BocaminaII")
+    midi_file.addTrackName(0, 0, "Piano-Embalses")
+    midi_file.addTrackName(1, 0, "Sample-Ralco")
+    midi_file.addTrackName(2, 0, "Bass-BocaminaII")
     midi_file.addTempo(track, time, tempo)
     # midi_file.addProgramChange(track, channel, time, program)
     duration = 1.0
@@ -117,11 +117,11 @@ def compose_midi(in_data,notes,max_gen):
                     # print "Ralco!"
                 # elseif column is bocamina create bass
                 elif in_data[0][column] == "Bocamina_II":
-                    # note = note_assign(float(in_data[i][column]),"Bocamina_II",-2,c_maj,10,in_data)
-                    # # print note
-                    # volume = 100
-                    # midi_file.addNote(track+2, channel, note, time, duration, volume)
-                    print "Bocamina!"
+                    note = note_assign(float(in_data[i][column]),"Bocamina_II",-2,c_maj,10,in_data)
+                    # print note
+                    volume = 100
+                    midi_file.addNote(track+2, channel, note, time, duration, volume)
+                    # print "Bocamina!"
                 # else do chords
                 else:
                     note = notes[in_data[0][column]]

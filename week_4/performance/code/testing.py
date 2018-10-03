@@ -75,10 +75,12 @@ def note_assign(value, plant, octave, scale, number_of_notes, data_set):
 
 # print note_assign(float(generation[9][9]),"Ralco", 1, c_maj, 4, generation)
 # print generation[9][9]
-for i in range(1,len(generation)):
-    print note_assign(float(generation[i][9]),"Ralco", 1, c_maj, 4, generation)
+# for i in range(1,len(generation)):
+#     print note_assign(float(generation[i][9]),"Ralco", 1, c_maj, 4, generation)
     # print generation[i][9]
 
 # print("value", "modulo", "division")
 # for i in range(30):
 #     print(i, i % 12, round(i / 12))
+
+print generation
