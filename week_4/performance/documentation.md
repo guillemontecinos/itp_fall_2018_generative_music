@@ -17,4 +17,4 @@ To complete the sound landscape a bass line was added which pitch is mapped from
 
 The midi file generated in the process was exported to Ableton Live, where VST were assigned to play piano in the case of dam plants and cello in the case of Ralco. Both of them were also processed with a Digidelay pedal. The bass line was used to control a Moog Minitaur via MIDI. To complete the piece, the voice of Nicolasa Quintremán was imported as samples in order to the narrative of the piece. All the samples were taken from the video documentary [Ralco](https://www.youtube.com/watch?v=qci-M7_Xmo8) by Estéban Larraín.
 
-The full piece can be found here.
+The full piece can be found [here](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_4/performance/data/Nicolasa_data_sonification_1.mp3).
