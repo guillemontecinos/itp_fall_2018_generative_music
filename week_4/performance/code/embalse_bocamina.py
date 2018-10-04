@@ -103,10 +103,10 @@ def compose_midi(in_data,notes,max_gen):
     duration = 1.0
     i = 1
     while i < len(in_data):
-        time = float(in_data[i][0])
+        time = float(in_data[i][1])-1.0
         # print time
         if time >= 0:
-            column = 1
+            column = 2
             while column < len(in_data[i]):
                 # if column is ralco do notes to trigger mapuche samples
                 if in_data[0][column] == "Ralco":
