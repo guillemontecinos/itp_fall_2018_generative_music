@@ -9,7 +9,7 @@ import math
 from scipy import stats
 
 # declare input and output file paths
-csv_input = '../data/embalse_bocamina_ene_feb.csv'
+csv_input = '../data/embalse_bocamina_ene_abr.csv'
 midi_output = '../midi_folder/embalse_bocamina.mid'
 
 # define c maj scale
