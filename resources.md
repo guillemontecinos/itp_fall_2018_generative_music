@@ -7,3 +7,8 @@
 * [N-grams and Markov chains, by Allison Parrish](https://github.com/aparrish/rwet/blob/master/ngrams-and-markov-chains.ipynb)
 * [RiTa.js reference](https://rednoise.org/rita/reference/index.php)
 * [mido.py library](https://mido.readthedocs.io/)
+
+## Machine Learning
+* [Latent Dirichlet allocation](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation)
+* [LATENT CONSTRAINTS: LEARNING TO GENERATE CONDITIONALLY FROM UNCONDITIONAL GENERATIVE MODELS](https://arxiv.org/pdf/1711.05772.pdf)
+* [Auto-Encoding Variational Bayes](https://arxiv.org/pdf/1312.6114.pdf)
