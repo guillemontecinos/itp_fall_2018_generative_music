@@ -21,3 +21,8 @@
 * [MNIST Dataset](http://yann.lecun.com/exdb/mnist/)
 * [ImageNet Dataset](http://image-net.org/)
 * [A People's Guide to AI](https://www.alliedmedia.org/peoples-ai)
+* [Wekinator - Examples](http://www.wekinator.org/examples/)
+* [import.io - ML Dataset for musical training](https://www.import.io/post/machine-learning-dataset-musical-training/)
+* [DL4M - Deep Learning for Music](https://github.com/ybayle/awesome-deep-learning-music)
+* [Magenta - Tensorflow](https://magenta.tensorflow.org/)
+* [Dance x Machine Learning: First Steps - Kyle McDonald](https://medium.com/@kcimc/discrete-figures-7d9e9c275c47) 
