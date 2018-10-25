@@ -1,6 +1,7 @@
 # from Generative Music's Class 2 Code
 from mido import MidiFile
-mid = MidiFile('dataset/radiohead/19_idioteque.mid')
+file_name = '21_knives_out'
+mid = MidiFile('dataset/radiohead/' + file_name + '.mid')
 
 # look at the track names
 for i, track in enumerate(mid.tracks):
@@ -9,12 +10,11 @@ for i, track in enumerate(mid.tracks):
 # create array of notes
 notes = []
 messages = []
-for message in mid.tracks[4]:
+for message in mid.tracks[7]:
     messages.append(message)
-# print messages
 
 for m in range(len(messages)):
-    print messages[m]
+    # print messages[m]
     note = ""
     time = ""
     if messages[m].type == 'note_on':
@@ -34,6 +34,6 @@ notes = ' '.join(notes)
 # print notes
 
 # write notes to text file
-note_file = open("./assets/notes.txt", "w")
+note_file = open('./assets/' + file_name + '.txt', 'w')
 note_file.write(notes)
 note_file.close()
