@@ -11,3 +11,5 @@ The data used to train the model was gathered by me and @sofialuisa. The model w
 * 18_fake_plastic_trees
 * 19_idioteque
 * 21_kinves_out
+### procedure
+five words of 200 char were generated
