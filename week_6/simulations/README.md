@@ -2,7 +2,7 @@
 The simulations in this folder were generated an LSTM using ml5.js.
 The data used to train the model was gathered by me and @sofialuisa. The model was trained following [Hannah Davis' repo](https://github.com/handav/lstm_training_and_generation)
 
-## radiohead_1.txt
+## [radiohead_1.txt](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/simulations/radiohead_1.txt)
 ### date: Oct 26th, 2018
 ### files:
 * 4_faust_arp
