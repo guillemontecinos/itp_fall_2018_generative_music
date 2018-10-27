@@ -18,7 +18,7 @@ five words of 200 char were generated
 * seed: '5'
 * length: 1000
 * temperature: 0.1
-### cleaned version
+### [cleaned version](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/simulations/radiohead_sim_1_cleaned.txt)
 
 ## [radiohead_sim_2](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/simulations/radiohead_sim_2.txt)
 ### date: Oct 27th, 2018
@@ -28,7 +28,7 @@ five words of 200 char were generated
 * seed: '5'
 * length: 1000
 * temperature: 0.5
-### cleaned version
+### [cleaned version](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/simulations/radiohead_sim_2_cleaned.txt)
 
 ## [radiohead_sim_3](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/simulations/radiohead_sim_3.txt)
 ### date: Oct 27th, 2018
@@ -38,4 +38,4 @@ five words of 200 char were generated
 * seed: '5'
 * length: 1000
 * temperature: 0.9
-### cleaned version
+### [cleaned version](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/simulations/radiohead_sim_3_cleaned.txt)
