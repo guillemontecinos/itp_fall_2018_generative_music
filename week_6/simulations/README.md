@@ -10,7 +10,7 @@ five words of 200 char were generated
 ### temperature
 0.5
 
-## radiohead_sim_1
+## [radiohead_sim_1](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/simulations/radiohead_sim_1.txt)
 ### date: Oct 27th, 2018
 ### main.js inputs
 * model: data_e50
@@ -19,7 +19,7 @@ five words of 200 char were generated
 * length: 1000
 * temperature: 0.1
 
-## radiohead_sim_2
+## [radiohead_sim_2](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/simulations/radiohead_sim_2.txt)
 ### date: Oct 27th, 2018
 ### main.js inputs
 * model: data_e50
@@ -28,7 +28,7 @@ five words of 200 char were generated
 * length: 1000
 * temperature: 0.5
 
-## radiohead_sim_3
+## [radiohead_sim_3](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/simulations/radiohead_sim_3.txt)
 ### date: Oct 27th, 2018
 ### main.js inputs
 * model: data_e50
