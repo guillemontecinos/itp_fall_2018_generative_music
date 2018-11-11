@@ -1,7 +1,9 @@
 # from Generative Music's Class 2 Code
+# by Guillermo Montecinos
+# Oct, 2018
 from mido import MidiFile
-file_name = '21_knives_out'
-mid = MidiFile('dataset/radiohead/' + file_name + '.mid')
+file_name = 'just'
+mid = MidiFile('dataset/radiohead/midi/' + file_name + '.mid')
 
 # look at the track names
 for i, track in enumerate(mid.tracks):
@@ -10,7 +12,7 @@ for i, track in enumerate(mid.tracks):
 # create array of notes
 notes = []
 messages = []
-for message in mid.tracks[7]:
+for message in mid.tracks[1]:
     messages.append(message)
 
 for m in range(len(messages)):
@@ -27,7 +29,7 @@ for m in range(len(messages)):
         for item in message_components:
             if 'time=' in item:
                 time = item.split('time=')[1]
-    if note != "":
+    if note != "" and time != "0>":
         notes.append(str(note + "_" + time))
 
 notes = ' '.join(notes)

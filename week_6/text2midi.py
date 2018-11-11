@@ -1,7 +1,7 @@
 import os
 import midiutil
 
-filename = 'radiohead_sim_3_cleaned'
+filename = 'radiohead_sim_4_cleaned'
 input = []
 
 def save_midi(midi_file, outname):
@@ -23,8 +23,10 @@ def compose_midi(song):
     notes = song.split(" ")
     for each_note in notes:
         pitch = int(each_note.split("_")[0])
-        # duration = float(tempo)*float(each_note.split("_")[1])/60000
-        duration = 1
+        if pitch > 255:
+            pitch = int(pitch/100)
+        duration = float(tempo)*float(each_note.split("_")[1])/60000
+        # duration = 1
         if duration != 0.0:
             midi_file.addNote(track, channel, pitch, time, duration, volume)
         time = time + duration
@@ -40,3 +42,8 @@ for song in input:
     save_midi(midi_file,'./output/' + filename + '_' + str(counter) + '.mid')
     counter = counter + 1
     # print song
+
+    # ONLY FOR DEBUGGING
+    # notes = song.split(" ")
+    # for each_note in notes:
+    #     print each_note

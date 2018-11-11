@@ -39,3 +39,13 @@ five words of 200 char were generated
 * length: 1000
 * temperature: 0.9
 ### [cleaned version](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/simulations/radiohead_sim_3_cleaned.txt)
+
+## [radiohead_sim_4](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/simulations/radiohead_sim_4.txt)
+### date: Nov 10th, 2018
+### main.js inputs
+* model: data_2_e50
+* simulations: 10
+* seed: '54_480'
+* length: 1000
+* temperature: 0.9
+### [cleaned version](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/simulations/radiohead_sim_4_cleaned.txt)
