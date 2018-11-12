@@ -25,5 +25,7 @@
 * [import.io - ML Dataset for musical training](https://www.import.io/post/machine-learning-dataset-musical-training/)
 * [DL4M - Deep Learning for Music](https://github.com/ybayle/awesome-deep-learning-music)
 * [Magenta - Tensorflow](https://magenta.tensorflow.org/)
+* [Magenta Demos](https://magenta.tensorflow.org/demos)
+* [Magenta Polyphony RNN](https://github.com/tensorflow/magenta/tree/master/magenta/models/polyphony_rnn)
 * [Dance x Machine Learning: First Steps - Kyle McDonald](https://medium.com/@kcimc/discrete-figures-7d9e9c275c47)
 * [Cheat Sheets for AI, Neural Networks, Machine Learning, Deep Learning & Big Data - Medium Post by Stefan Kojouharov](https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463)
