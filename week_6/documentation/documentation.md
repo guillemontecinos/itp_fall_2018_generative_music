@@ -2,7 +2,7 @@
 *Generative music piece built with Machine Learning from Radiohead's data by Sofía Suazo and Guillermo Montecinos for Generative Music class, NYU ITP Fall 2018.*
 
 <p align="center">
-  <img src="https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/documentation/yeah_I_feelings.jpg" align="middle" width="70%">
+  <img src="https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/documentation/yeah_I_feelings.jpg" align="middle" width="50%">
 </p>
 
 Yes I'm feelings is 2:19 minutes a musical piece inspired in Radiohead's [Fitter Happier](https://www.youtube.com/watch?v=My10FLH5DT0) song from the album *Ok Computer*. It was build by predicting Radiohead-styled lyrics and melodies from two databases, which were live triggered from two computers. This piece was collaboration with [Sofía Suazo](https://www.sofialuisa.xyz/) for the midterm of the Generative Music class at NYU ITP, Fall 2018.
