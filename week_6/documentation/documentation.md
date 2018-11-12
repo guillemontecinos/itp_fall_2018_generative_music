@@ -35,7 +35,7 @@ For training the LSTM model MIDI data was converted into text sequences, process
 Each song was interpreted into a concatenation of words that were composed by the MIDI pitch in values from 0 - 127, and the time in ticks -each note looked like "66_238". The processed data can be found [here](https://github.com/guillemontecinos/itp_fall_2018_generative_music/blob/master/week_6/assets/). Finally, as the model training script used requires a unified dataset as an input, all songs were concatenated into one file called *input.txt*.
 
 ## Model training and simulations with ml5.js
-For the model training process the [LSTM training framework](https://github.com/handav/lstm_training_and_generation) developed by Hannah Davis was used. This model was trained with the data gotten from the melody of 12 Radiohead's.
+For the model training process the [LSTM training framework](https://github.com/handav/lstm_training_and_generation) developed by Hannah Davis was used. This model was trained with the data gotten from the melody of 12 Radiohead.
 
 
 ## Results
